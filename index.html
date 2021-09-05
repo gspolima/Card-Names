@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet" type="text/css">
     <title>Aula 3</title>
     
@@ -14,96 +15,22 @@
         <header>
            <div class="title">Card Names</div>
            <ul>
-               <li><a href="https://twitter.com/gspolima">Twitter</a></li>
-               <li><a href="https://github.com/gspolima">Github</a></li>
+               <li><a href="https://github.com/gspolima" target="_blank"><img src="./img/github.png"></a></li>
            </ul>
         </header>
 
         <div class="contentContainer">
             <aside class="sidebar">
-                <button class="btn btn-primary">Add</button>
-                <button class="btn btn-danger">Remove All</button>
+                <button class="btn btn-add">New Card</button>
+                <div id="newCardForm"></div>
+                <button class="btn btn-delete">Remove All</button>
                 <div id="copyright"></div>
             </aside>
             <div class="cards">
                 <div class="container">
-                    <div class="card">
-                        <div class="card-header">
-                            1CT
-                        </div>
-                        <div class="card-body">
-                            1CB
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            2Card Title
-                        </div>
-                        <div class="card-body">
-                            2Card Body
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            3Card Title
-                        </div>
-                        <div class="card-body">
-                            3Card Body
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            4Card Title
-                        </div>
-                        <div class="card-body">
-                            4Card Body
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            5Card Title
-                        </div>
-                        <div class="card-body">
-                            5Card Body
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            6Card Title
-                        </div>
-                        <div class="card-body">
-                            6Card Body
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- <main>
-            <form id="personalDataForm">
-                <div>
-                    <label for="firstName">Name</label>
-                </div>
-                <div>
-                    <input id="firstName" type="text">
-                </div>
-                <div>
-                    <label for="lastName">Surname</label>
-                </div>
-                <div>
-                    <input id="lastName" type="text">
-                </div>
-                <div>
-                    <label for="age">Age</label>
-                </div>
-                <div>
-                    <input id="age" type="number">
-                </div>
-                <div>
-                    <input type="submit" value="Create">
-                </div>
-            </form>
-        </main> -->
-        <div id="result"></div>
     </div>
 </body>
 <script type="text/javascript" src="index.js"></script>

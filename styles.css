@@ -1,66 +1,61 @@
 html, body {
-    margin: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .mainContainer {
-    margin: inherit;
-    display: flex;
-    flex-flow: column nowrap;
     height: inherit;
     width: inherit;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 header {
     display: flex;
-    flex-flow: row;
+    flex-flow: row nowrap;
     align-items: center;
-    background-color: #4C934C;
+    background-color: #2A3D45;
     color: white;
+    min-height: 60px;
 }
 
 header ul {
-    margin: 16px;
+    margin-right: 26px;
     margin-left: auto;
 }
 
 header ul li{
     display: inline;
-    text-decoration: none;
-    background-color: #373737;
-    border-radius: 8px;
-}
-
-ul li a {
-    color: white;
-    text-decoration: none;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-left: 12px;
 }
 
 header .title {
-    font-size: 26px;
-    font-weight: 500;
-    margin-left: 14px;
+    font-size: 36px;
+    font-weight: 700;
+    margin-left: 26px;
+    font-family: 'Yanone Kaffeesatz';
 }
 
 /* ------- */
 
-.contentContainer {
-    display: flex;
-    flex-flow: row nowrap;
+.mainContainer .contentContainer {
     height: inherit;
     width: inherit;
+    background-color: #262626;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .sidebar {
     background-color: #373737;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    min-width: 160px;
+    align-items: flex-start;
+    min-width: 200px;
+    padding-left: 26px;
+    padding-right: 26px;
 }
 
 .sidebar #copyright {
@@ -71,32 +66,102 @@ header .title {
     font-weight: 500;
 }
 
-/* Bootstrap overrides */
 .sidebar .btn {
     margin-top: 28px;
-    width: 110px;
-    border-radius: 16px;
+    min-width: 100%;
+    min-height: 45px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    color: white;
 }
 
-.cards {
-    background-color: #4e5b69;
+.btn-add {
+    background-color: #255C99;
+}
+
+.btn-add:hover {
+    background-color: #2f76c7;
+}
+
+.btn-delete {
+    background-color: rgb(134, 0, 0);
+}
+
+.btn-delete:hover {
+    background-color: rgb(199, 0, 0);
+}
+
+.contentContainer .cards {
+    height: inherit;
     width: inherit;
 }
 
-.cards > .container {
-    margin: 28px 10px;
+.cards .container {
+    box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.card {
-    background-color: #FCE694;
-    margin-left: 18px;
-    margin-bottom: 14px;
+
+.cards .container .card {
+    margin-top: 28px;
+    margin-left: 25px;
+    margin-right: 25px;
     min-width: 180px;
     max-width: 250px;
 }
 
-.card-body {
+.cards .container .card .card-title {
+    padding: 10px;
+    background-color: #FCE694;
+}
+
+.cards .container .card .card-body {
     background-color: #eee;
+    padding: 10px;
+}
+
+img {
+    width: 35px;
+    height: 35px;
+}
+
+#newCardForm {
+    margin-top: 10px;
+}
+
+#newCardForm .form-control {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 14px;
+}
+
+#newCardForm #addNewCard {
+    background-color: #4C934C;
+    margin-top: 8px;
+    min-width: 80px;
+    min-height: 35px;
+}
+
+#newCardForm #addNewCard:hover {
+    background-color: rgb(93, 187, 93);
+}
+
+input, textarea {
+    padding: 5px 10px;
+    max-width: 175px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Roboto';
+    border-radius: 8px;
+    border: none
+}
+
+input:focus-visible, textarea:focus-visible {
+    outline: none;
 }
