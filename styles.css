@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
 .mainContainer {
@@ -11,6 +11,8 @@ html, body {
     display: flex;
     flex-flow: column nowrap;
 }
+
+/* ------------------------- */
 
 header {
     display: flex;
@@ -31,14 +33,19 @@ header ul li{
     margin-left: 12px;
 }
 
+img {
+    width: 35px;
+    height: 35px;
+}
+
 header .title {
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 700;
-    margin-left: 26px;
+    margin-left: 28px;
     font-family: 'Yanone Kaffeesatz';
 }
 
-/* ------- */
+/* ------------------------- */
 
 .mainContainer .contentContainer {
     height: inherit;
@@ -47,6 +54,15 @@ header .title {
     display: flex;
     flex-flow: row nowrap;
 }
+
+.btn {
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+/* ------------------------- */
 
 .sidebar {
     background-color: #373737;
@@ -70,64 +86,23 @@ header .title {
     margin-top: 28px;
     min-width: 100%;
     min-height: 45px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    color: white;
+    font-size: 20px;
 }
 
-.btn-add {
+.btn-new {
     background-color: #255C99;
 }
 
-.btn-add:hover {
+.btn-new:hover {
     background-color: #2f76c7;
 }
 
-.btn-delete {
+.btn-removeAll {
     background-color: rgb(134, 0, 0);
 }
 
-.btn-delete:hover {
+.btn-removeAll:hover {
     background-color: rgb(199, 0, 0);
-}
-
-.contentContainer .cards {
-    height: inherit;
-    width: inherit;
-}
-
-.cards .container {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-
-.cards .container .card {
-    margin-top: 28px;
-    margin-left: 25px;
-    margin-right: 25px;
-    min-width: 180px;
-    max-width: 250px;
-}
-
-.cards .container .card .card-title {
-    padding: 10px;
-    background-color: #FCE694;
-}
-
-.cards .container .card .card-body {
-    background-color: #eee;
-    padding: 10px;
-}
-
-img {
-    width: 35px;
-    height: 35px;
 }
 
 #newCardForm {
@@ -138,7 +113,7 @@ img {
     color: white;
     font-size: 18px;
     font-weight: 500;
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
 #newCardForm #addNewCard {
@@ -146,6 +121,7 @@ img {
     margin-top: 8px;
     min-width: 80px;
     min-height: 35px;
+    font-size: 16px;
 }
 
 #newCardForm #addNewCard:hover {
@@ -159,9 +135,72 @@ input, textarea {
     font-size: 16px;
     font-family: 'Roboto';
     border-radius: 8px;
-    border: none
+    border: 2px solid #1f1f1f;
 }
 
 input:focus-visible, textarea:focus-visible {
     outline: none;
+}
+
+/* ------------------------- */
+
+.contentContainer .cards {
+    height: inherit;
+    width: inherit;
+}
+
+.cards .container {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-left: 26px;
+    margin-top: 28px;
+}
+
+.cards .container .card {
+    min-width: 180px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    max-width: 250px;
+}
+
+.cards .container .card .card-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #FCE694;
+}
+
+.cards .container .card .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.cards .container .card .card-options {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.cards .container .card .card-body {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.card-options .btn {
+    background-color: transparent;
+    font-size: 14px;
+    padding: 2px;
+    margin-left: 4px;
+}
+
+.card-options .btn-remove:hover {
+    background-color: rgb(0, 128, 128);
+}
+
+.card-options .btn-edit:hover {
+    background-color: rgb(73, 0, 243);
 }
