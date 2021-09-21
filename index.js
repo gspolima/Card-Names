@@ -39,6 +39,7 @@ function addNewCard(cardsContainer, formTitle, formBody) {
     
         let cardHeader = document.createElement('div');
         cardHeader.setAttribute('class', 'card-header');
+        cardHeader.style.backgroundColor = selectCardHeaderColor();
     
         let cardTitle = document.createElement('div');
         cardTitle.setAttribute('class', 'card-title');
@@ -179,4 +180,17 @@ function enableCardEditing() {
             })
         })
     }
+}
+
+function selectCardHeaderColor() {
+    const colors = [
+        '9FFCDF', 'DB9D47', 'F1E4F3', 'C4D6B0',
+        'CCC9DC', 'BFCDE0', 'F1DAC4', 'FFAA5A',
+        '8DAA9D', '87F5FB', 'E0B0D5', 'CBF3D2',
+        'C4A381', 'AED9E0', '29E7CD', 'EFBC9B',
+        'EAF4F4', 'A5BE00', '9FCC2E', '30F2F2',
+        'F6D8AE', 'FFFFFF', 'D2CBCB', '98D2EB'];
+    
+    const chosenColor = Math.floor((Math.random() * colors.length));
+    return `#${colors[chosenColor]}`;
 }

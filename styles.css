@@ -171,7 +171,8 @@ input:focus-visible, textarea:focus-visible {
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
-    background-color: #FCE694;
+    /* background-color: #FCE694; */
+    border-bottom: 2px solid black;
 }
 
 .cards .container .card .card-title {
