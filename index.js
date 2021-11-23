@@ -88,7 +88,7 @@ function renderNewCardForm(formDiv) {
     formDiv.innerHTML = `
         <div class="form-control">
             <div>
-                <label for="title">Title</label>
+                <label for="title">Título</label>
             </div>
             <div>
                 <textarea id="title" rows=1></textarea>
@@ -96,13 +96,13 @@ function renderNewCardForm(formDiv) {
         </div>
         <div class="form-control">
             <div>
-                <label for="body">Body</label>
+                <label for="body">Conteúdo</label>
             </div>
             <div>
                 <textarea id="body" rows=5></textarea>
             </div>
         </div>
-        <button id="addNewCard" class="btn btn-create">Add</button>`;
+        <button id="addNewCard" class="btn btn-create">Adicionar</button>`;
 }
 
 function clearFormFields(titleField, bodyField) {
@@ -111,9 +111,7 @@ function clearFormFields(titleField, bodyField) {
 }
 
 function displayCurrentYear() {
-    const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    document.getElementById('copyright').innerHTML = `&copy; ${year} Gustavo S.`;
+    document.getElementById('copyright').innerHTML = `&copy; Gustavo Sampaio<br> Matrícula: 201902509722`;
 }
 
 class Card {
