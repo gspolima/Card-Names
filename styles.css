@@ -53,6 +53,7 @@ header .title {
     background-color: #262626;
     display: flex;
     flex-flow: row nowrap;
+    overflow: auto;
 }
 
 .btn {
@@ -69,9 +70,10 @@ header .title {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
-    min-width: 200px;
+    min-width: 216px;
     padding-left: 26px;
     padding-right: 26px;
+    overflow: auto;
 }
 
 .sidebar #copyright {
@@ -189,6 +191,7 @@ input:focus-visible, textarea:focus-visible {
 .cards .container .card .card-body {
     background-color: #eee;
     padding: 10px;
+    overflow: auto;
 }
 
 .card-options .btn {
